@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3{
+    padding-bottom: 1em;
+}
+
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "cabeza cabeza"
+        "menuprincipal contenido"
+        "pie pie";
+    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+.menu-categorias{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding: 1em;
+    font-size: large;
+}
+
+.grid-container-tienda{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 10px;
+    padding: 1em;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: white;
+}
+
+.grid-item img{
+    width: 250px;
+    display: block;
+}
+
+.grid-item p{
+    padding-bottom: 1em;
+}
+
+button{
+    background-color: lightblue;
+    color: white;
+    height: 3em;
+    width: 100%;
+    background-color: royalblue;
+    font-size: medium;
+}
+
+header{
+    grid-area: cabeza;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: royalblue;
+    color: white;
+}
+
+menu{
+    grid-area: menuprincipal;
+    background-color: lightgray;
+}
+
+main{
+    grid-area: contenido;
+    background-color: lightgray;
+    overflow: auto;
+}
+
+footer{
+    grid-area: pie;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
